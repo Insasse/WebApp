@@ -1,6 +1,4 @@
-import feathers from '@feathersjs/feathers'
 import feathersVuex from 'feathers-vuex'
-import authentication from '@feathersjs/authentication-client'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createApiClient from '../helpers/createApiClient'
@@ -75,7 +73,6 @@ export default ({app, store, redirect, router, req, res}) => {
     // On a new real-time connection, add it to the anonymous channel
     api.channel('authenticated').join(connection)
   })
-
 
   // make the api accessible inside vue components
   Vue.use({
